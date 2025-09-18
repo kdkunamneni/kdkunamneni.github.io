@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Linkedin, Github, Mail, Phone } from 'lucide-react';
-import './Hero.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { Linkedin, Github, Mail, Phone } from "lucide-react";
+import "./Hero.css";
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           >
             Hi, I'm <span className="highlight">Kanakadurga Kunamneni</span>
           </motion.h1>
-          
+
           <motion.h2
             className="hero-subtitle"
             initial={{ opacity: 0, y: 30 }}
@@ -37,16 +37,17 @@ const Hero: React.FC = () => {
           >
             Data Scientist & Health Informatics Specialist
           </motion.h2>
-          
+
           <motion.p
             className="hero-description"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Transforming healthcare through data-driven insights, machine learning, 
-            and advanced analytics. Passionate about improving patient outcomes 
-            and healthcare delivery through innovative technology solutions.
+            Transforming healthcare through data-driven insights, machine
+            learning, and advanced analytics. Passionate about improving patient
+            outcomes and healthcare delivery through innovative technology
+            solutions.
           </motion.p>
 
           <motion.div
@@ -80,7 +81,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 1, duration: 0.8 }}
           >
             <a
-              href="https://linkedin.com/in/kanakadurga-kunamneni"
+              href="https://linkedin.com/in/kanakadurgak"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -89,7 +90,7 @@ const Hero: React.FC = () => {
               <Linkedin />
             </a>
             <a
-              href="https://github.com/kanakadurga"
+              href="https://github.com/kdkunamneni"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -120,11 +121,11 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          <div className="image-placeholder">
-            <div className="profile-icon">
-              <span>KK</span>
-            </div>
-          </div>
+          <img
+            src="/images/profile-photo.jpg"
+            alt="Kanakadurga Kunamneni"
+            className="profile-photo"
+          />
         </motion.div>
       </div>
 

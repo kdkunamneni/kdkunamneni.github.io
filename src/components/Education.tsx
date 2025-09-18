@@ -1,38 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { GraduationCap, MapPin, Calendar } from 'lucide-react';
-import './Education.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { GraduationCap, MapPin, Calendar } from "lucide-react";
+import "./Education.css";
 
 const Education: React.FC = () => {
   const education = [
     {
-      degree: 'Master of Science, Health Informatics',
-      institution: 'Northeastern University',
-      location: 'Boston, MA',
-      duration: 'Jan 2021 – Dec 2022',
-      description: 'Advanced studies in health informatics, data science, and healthcare technology. Focused on clinical data analysis, healthcare information systems, and population health analytics.',
+      degree: "Master of Science, Health Informatics",
+      institution: "Northeastern University",
+      location: "Boston, MA",
+      duration: "Jan 2021 – Dec 2022",
+      description:
+        "Advanced studies in health informatics, data science, and healthcare technology. Focused on clinical data analysis, healthcare information systems, and population health analytics.",
       highlights: [
-        'Healthcare Data Analytics',
-        'Clinical Information Systems',
-        'Population Health Management',
-        'Healthcare Data Standards (HL7, FHIR)',
-        'Machine Learning in Healthcare'
-      ]
+        "Healthcare Data Analytics",
+        "Clinical Information Systems",
+        "Population Health Management",
+        "Healthcare Data Standards (HL7, FHIR)",
+        "Machine Learning in Healthcare",
+      ],
     },
     {
-      degree: 'Doctor of Pharmacy (PharmD)',
-      institution: 'Osmania University',
-      location: 'Hyderabad, India',
-      duration: 'Sep 2013 – Aug 2019',
-      description: 'Comprehensive pharmaceutical education with clinical training, drug therapy management, and healthcare system integration. Strong foundation in clinical practice and patient care.',
+      degree: "Doctor of Pharmacy (PharmD)",
+      institution: "Osmania University",
+      location: "Hyderabad, India",
+      duration: "Sep 2013 – Aug 2019",
+      description:
+        "Comprehensive pharmaceutical education with clinical training, drug therapy management, and healthcare system integration. Strong foundation in clinical practice and patient care.",
       highlights: [
-        'Clinical Pharmacy Practice',
-        'Drug Therapy Management',
-        'Pharmacology & Therapeutics',
-        'Healthcare Systems',
-        'Patient Care & Counseling'
-      ]
-    }
+        "Clinical Pharmacy Practice",
+        "Drug Therapy Management",
+        "Pharmacology & Therapeutics",
+        "Healthcare Systems",
+        "Patient Care & Counseling",
+      ],
+    },
   ];
 
   return (
@@ -109,7 +111,9 @@ const Education: React.FC = () => {
           <h3>Professional Certifications & Training</h3>
           <div className="cert-grid">
             <div className="cert-item">
-              <span className="cert-name">AWS Certified Cloud Practitioner</span>
+              <span className="cert-name">
+                AWS Certified Cloud Practitioner
+              </span>
               <span className="cert-year">2023</span>
             </div>
             <div className="cert-item">

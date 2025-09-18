@@ -1,75 +1,100 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, Phone, Linkedin, Github, 
-  MapPin, Send, CheckCircle 
-} from 'lucide-react';
-import './Contact.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  Linkedin,
+  Github,
+  MapPin,
+  Send,
+  CheckCircle,
+} from "lucide-react";
+import "./Contact.css";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend service
-    console.log('Form submitted:', formData);
+    fetch("https://formsubmit.co/ajax/294f8a7d446636b773a0f291f2bb09b2", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to send message");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Email sent successfully:", data);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+    console.log("Form submitted:", formData);
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: "", email: "", subject: "", message: "" });
     }, 3000);
   };
 
   const contactInfo = [
     {
-      title: 'Email',
-      value: 'kunamneni.kd@gmail.com',
-      link: 'mailto:kunamneni.kd@gmail.com'
+      title: "Email",
+      value: "kunamneni.kd@gmail.com",
+      link: "mailto:kunamneni.kd@gmail.com",
     },
     {
-      title: 'Phone',
-      value: '(774) 813-5733',
-      link: 'tel:+17748135733'
+      title: "LinkedIn",
+      value: "linkedin.com/in/kanakadurgak",
+      link: "https://linkedin.com/in/kanakadurgak",
     },
     {
-      title: 'LinkedIn',
-      value: 'linkedin.com/in/kanakadurga-kunamneni',
-      link: 'https://linkedin.com/in/kanakadurga-kunamneni'
+      title: "GitHub",
+      value: "github.com/kdkunamneni",
+      link: "https://github.com/kdkunamneni",
     },
     {
-      title: 'GitHub',
-      value: 'github.com/kanakadurga',
-      link: 'https://github.com/kanakadurga'
+      title: "Location",
+      value: "La Vista, NE, USA",
+      link: "#",
     },
-    {
-      title: 'Location',
-      value: 'La Vista, NE, USA',
-      link: '#'
-    }
   ];
 
   const getContactIcon = (index: number) => {
     switch (index) {
-      case 0: return <Mail />;
-      case 1: return <Phone />;
-      case 2: return <Linkedin />;
-      case 3: return <Github />;
-      case 4: return <MapPin />;
-      default: return <Mail />;
+      case 0:
+        return <Mail />;
+      case 1:
+        return <Linkedin />;
+      case 2:
+        return <Github />;
+      case 3:
+        return <MapPin />;
+      default:
+        return <Mail />;
     }
   };
 
@@ -85,7 +110,8 @@ const Contact: React.FC = () => {
         >
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle">
-            Let's discuss how we can work together to improve healthcare through data science
+            Let's discuss how we can work together to improve healthcare through
+            data science
           </p>
         </motion.div>
 
@@ -99,9 +125,10 @@ const Contact: React.FC = () => {
           >
             <h3>Let's Connect</h3>
             <p>
-              I'm always interested in discussing new opportunities in healthcare data science, 
-              machine learning, and health informatics. Whether you have a project in mind or 
-              just want to chat about the latest in healthcare technology, I'd love to hear from you.
+              I'm always interested in discussing new opportunities in
+              healthcare data science, machine learning, and health informatics.
+              Whether you have a project in mind or just want to chat about the
+              latest in healthcare technology, I'd love to hear from you.
             </p>
 
             <div className="contact-methods">
@@ -116,9 +143,7 @@ const Contact: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="method-icon">
-                    {getContactIcon(index)}
-                  </div>
+                  <div className="method-icon">{getContactIcon(index)}</div>
                   <div className="method-content">
                     <h4>{info.title}</h4>
                     <p>{info.value}</p>
@@ -146,7 +171,7 @@ const Contact: React.FC = () => {
           >
             <div className="contact-form-wrapper">
               <h3>Send a Message</h3>
-              
+
               {isSubmitted ? (
                 <motion.div
                   className="success-message"

@@ -8,7 +8,7 @@
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +154,7 @@
 }
 
 .image-placeholder::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -170,6 +170,14 @@
   font-size: 4rem;
   font-weight: 700;
   color: white;
+}
+
+.profile-photo {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .scroll-indicator {
