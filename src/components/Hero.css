@@ -5,6 +5,7 @@
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   position: relative;
   overflow: hidden;
+  padding-top: 5rem; /* Add padding to prevent overlap with the header */
 }
 
 .hero::before {
@@ -35,8 +36,9 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 3rem; /* Default size for larger screens */
+  font-weight: bold;
+  text-align: center;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: #1a202c;
@@ -207,7 +209,7 @@
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjust size for tablets and smaller screens */
   }
 
   .hero-subtitle {
@@ -229,5 +231,11 @@
 
   .profile-icon {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem; /* Adjust size for mobile devices */
   }
 }

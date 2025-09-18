@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Hi, I'm <span className="highlight">Kanakadurga Kunamneni</span>
+            Hi, I'm <span className="highlight">Kanakadurga</span>
           </motion.h1>
 
           <motion.h2
