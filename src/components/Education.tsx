@@ -101,7 +101,7 @@ const Education: React.FC = () => {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="certifications"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ const Education: React.FC = () => {
               <span className="cert-year">2023</span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

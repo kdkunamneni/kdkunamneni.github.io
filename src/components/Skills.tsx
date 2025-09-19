@@ -204,9 +204,9 @@ const Skills: React.FC = () => {
                   >
                     <div className="skill-header">
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-level">{skill.level}%</span>
+                      {/* <span className="skill-level">{skill.level}%</span> */}
                     </div>
-                    <div className="skill-bar">
+                    {/* <div className="skill-bar">
                       <motion.div
                         className="skill-progress"
                         initial={{ width: 0 }}
@@ -217,7 +217,7 @@ const Skills: React.FC = () => {
                         }}
                         viewport={{ once: true }}
                       />
-                    </div>
+                    </div> */}
                     <p className="skill-description">{skill.description}</p>
                   </motion.div>
                 ))}

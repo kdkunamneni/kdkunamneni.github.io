@@ -11,12 +11,12 @@ const Experience: React.FC = () => {
       location: "La Vista, NE",
       duration: "Mar 2023 – Present",
       achievements: [
-        "Developed and automated a 30-day readmissions analytics pipeline in AWS Redshift using HL7v2 HIE data, applied XGBoost in Python to predict risk scores. Delivered near-real-time results via an interactive dashboard to rural healthcare facilities to identify high-risk patients, reducing manual report preparation by 80% and supporting targeted interventions to lower readmission rates.",
-        "Mapped HL7v2 and FHIR data elements to the OMOP Common Data Model and automated terminology standardization (ICD, CPT, LOINC, SNOMED) using Athena, Usagi, and IMO APIs with Python scripts (pandas, numpy). Reduced manual mapping time by 70% and improved data consistency to accelerate population health analytics across multiple data sources.",
-        "Developed and optimized SQL scripts to compute HEDIS measures (breast and colon cancer screenings), MME, and Opioid mortality rates. Stored JSON outputs in AWS S3 to support a real-time dashboard, reducing query latency by 30% and validating outputs against national benchmarks with less than 5% variance to ensure compliance and data accuracy.",
-        "Designed and implemented cohort structures in PostgreSQL, deidentified PHI using SHA-256 hashing technique, and automated daily refreshes via stored procedures. Integrated millions of records from EHR, PDMP, Claims, NESIIS and NPPES data to support disease registries, population health analytics and reporting.",
-        "Developed a Tableau dashboard to visualize behavioral health trends and pediatric ED visits across 93 Nebraska counties, enabling stakeholders to identify high-need areas and allocate resources effectively to address behavioral health gaps.",
-        "Maintained version-controlled analytics codebase using GitHub/GitLab, enabling collaborative development, code reviews, and continuous integration for healthcare data pipelines and models.",
+        "Automated a 30-day readmissions pipeline using AWS Redshift and XGBoost, reducing manual reporting by 80% and supporting targeted interventions.",
+        "Mapped HL7v2 and FHIR data to OMOP CDM, standardized terminology, and improved data consistency for population health analytics.",
+        "Optimized SQL scripts for HEDIS measures and opioid mortality rates, reducing query latency by 30% and ensuring compliance with benchmarks.",
+        "Designed cohort structures, deidentified PHI, and integrated EHR, PDMP, and Claims data for disease registries and analytics.",
+        "Created Tableau dashboards to visualize behavioral health trends and pediatric ED visits, enabling resource allocation across Nebraska counties.",
+        "Maintained version-controlled analytics codebase using GitHub/GitLab for collaborative development and continuous integration.",
       ],
     },
     {
@@ -25,8 +25,8 @@ const Experience: React.FC = () => {
       location: "Salt Lake City, UT",
       duration: "Jan 2022 – Jul 2022",
       achievements: [
-        "Identified, curated, and structured breast cancer lab data from a dataset of 100k patient records and supported the clinical architecture of oncology registries. Employed Python-based machine learning models to conduct predictive analysis on genetic dataset, thereby facilitating the prognosis of breast cancer.",
-        "Engineered SQL queries to perform comprehensive terminology analysis and data quality assessment of COVID-19 laboratory data. Designed a terminology information model for oxygen use and developed a detailed glossary of oxygen delivery system characteristics to standardize clinical data interpretation.",
+        "Curated breast cancer lab data and applied machine learning for predictive analysis, aiding oncology registry development.",
+        "Performed terminology analysis and standardized COVID-19 lab data, improving clinical data interpretation.",
       ],
     },
     {
@@ -35,8 +35,8 @@ const Experience: React.FC = () => {
       location: "Hyderabad, India",
       duration: "Nov 2019 – Dec 2020",
       achievements: [
-        "Conducted social media mining on patient forums and other platforms to detect real-world mentions of drug side effects, using Python and sentiment analysis to identify emerging safety signals ahead of formal reporting.",
-        "Translated 10,000+ unstructured adverse event narratives into structured, coded data using MedDRA and WHO Drug dictionaries with 99.8% accuracy. Prepared regulatory safety reports and performed literature-based signal surveillance to identify drug safety trends using advanced analytics and domain expertise.",
+        "Used Python and sentiment analysis to detect emerging drug safety signals from social media platforms.",
+        "Translated adverse event narratives into structured data with 99.8% accuracy and prepared regulatory safety reports.",
       ],
     },
     {
@@ -45,8 +45,8 @@ const Experience: React.FC = () => {
       location: "Hyderabad, India",
       duration: "Aug 2017 – Aug 2019",
       achievements: [
-        "Analyzed prescribing patterns and high-alert medication use within EHR/CPOE systems, and developed standardized protocols and evidence-based dosing algorithms, leading to improved adherence to clinical guidelines and a reduction in medication-related safety incidents across diverse patient populations in a high-volume hospital.",
-        "Collaborated with healthcare teams to provide drug information, medication counseling, and therapeutic recommendations, optimizing medication therapy management and improving patient outcomes.",
+        "Developed protocols and dosing algorithms to improve adherence to clinical guidelines and reduce medication-related incidents.",
+        "Provided drug information and therapeutic recommendations, optimizing medication therapy management and patient outcomes.",
       ],
     },
   ];

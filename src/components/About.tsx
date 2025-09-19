@@ -118,7 +118,7 @@ const About: React.FC = () => {
           </motion.div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="about-stats"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ const About: React.FC = () => {
             <h3>99.8%</h3>
             <p>Data Accuracy</p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
